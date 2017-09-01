@@ -9,7 +9,13 @@ http://static.tumblr.com/xi4q7k3/xj2nbqv8r/home_pic.png
 don't forget to include footer after everything and add the image to the background-url of the footer in the main css!!!
 
 =========================================================
-rabbitgirl 2.2 (May 1, 2016 - present)
+fvkr 1.0 (September 1, 2016 - present)
+=========================================================
+
+New domain! New pared down pages; finally off of tumblr. A good day all around
+
+=========================================================
+rabbitgirl 2.2 (May 1, 2016 - September 1, 2016)
 =========================================================
 
 Complete refactoring, to include templated code from a javascript file.

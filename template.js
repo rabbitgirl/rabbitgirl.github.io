@@ -1,7 +1,7 @@
 // this is a javascript file you fucks
 
 // templated head
-var head_front = `  <link rel="shortcut icon" href="{Favicon}">
+var head_front = `  <link rel="shortcut icon" href="/Images/favicon.png">
 
     <Title>@_____@</title>
 
@@ -19,17 +19,21 @@ var body_front = `
         
         <div id="headerlinks">
         
-            <a href="https://twitter.com/__rabbitgirl">
-                <img src="http://static.tumblr.com/xi4q7k3/jWanvi7pe/link_icon_-_twitter.png">
+            
+        <a href="https://twitter.com/_fvkr_">
+                <img src="/Images/link%20icon%20-%20twitter.png">
             </a>
-            <a href="https://music.rabbitgirl.me">
-                <img src="http://static.tumblr.com/xi4q7k3/Wkxnvi7pm/link_icon_-_bandcamp.png">
+            <a href="https://music.fvkr.co">
+                <img src="/Images/link%20icon%20-%20bandcamp.png">
             </a>
             <a href="https://soundcloud.com/rabbit_girl">
-                <img src="http://static.tumblr.com/xi4q7k3/gwjnvi7pi/link_icon_-_soundcloud.png">
+                <img src="/Images/link%20icon%20-%20soundcloud.png">
             </a>
-            <a href="https://linkedin.com/in/ritterg">
-                <img src="http://static.tumblr.com/xi4q7k3/D7Envi7pp/link_icon_-_linkedin.png">
+            <a href="https://instagram.com/ffvvkkrr">
+                <img src="/Images/link%20icon%20-%20instagram.png">
+            </a>
+        <a href="https://bitbucket.org/rabbitgirl">
+                <img src="/images/link%20icon%20-%20bitbucket.png">
             </a>
         
         </div>
@@ -40,12 +44,10 @@ var body_front = `
         
         <ul>
         <li><a href ="/about.html">about</a></li>
-        <li><a href ="http://music.rabbitgirl.me">music</a></li>
+        <li><a href ="http://music.fvkr.co">music</a></li>
         <li><a href ="/writing.html">writing</a></li>
-        <li><a href ="/portfolio.html">portfolio</a></li>
         <li><a href ="/projects.html">projects</a></li>
         <li><a href ="http://blog.rabbitgirl.me">blog</a></li>
-        <li><a href ="/friends.html">friends</a></li>
         <li><a href ="/contact.html">contact</a></li>
         </ul>
     

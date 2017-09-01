@@ -15,14 +15,6 @@
     min-height: 250px;
     z-index:-1;
 }
-    
-/* old header 
-#header {
-    font-family: square;
-    font-size: 24px;
-    padding: 10px 0px 0px 0px;
-    letter-spacing: -1px;
-} */
 
 /* back panel for header/sidebar */
 #back {
@@ -50,7 +42,8 @@
 #headerlinks {
     position:fixed;
     margin-top: -31px;
-    margin-left: 507px;
+    margin-left: 483px;
+    width:120px;
 }
     
 /* navigation links */   
@@ -68,14 +61,6 @@
 
 
 /* custom font for tags, top links and notes */
-@font-face {
-    font-family: 'square';
-    src: url('https://dl.dropboxusercontent.com/u/18330644/theme%20resources/fonts/text-eot') format('embedded-opentype'),
-         url('https://dl.dropboxusercontent.com/u/18330644/theme%20resources/fonts/text-woff.woff') format('woff'),
-         url('https://dl.dropboxusercontent.com/u/18330644/theme%20resources/fonts/text-ttf.ttf') format('truetype'),
-         url('https://dl.dropboxusercontent.com/u/18330644/theme%20resources/fonts/text-svg#tumblr_textregular') format('svg');
-    font-weight: normal;
-    font-style: normal;}
 
 body {
     font-family: trebuchet ms;
@@ -179,10 +164,6 @@ li {
     transition: background 0.15s ease;
     background: #fff;
     color: #314456;
-}
-
-iframe.tmblr-iframe {
-    display: none !important;   
 }
 
 /* firefox fixes */
