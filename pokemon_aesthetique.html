@@ -1,0 +1,118 @@
+<head>
+
+    <style type="text/css">
+        
+        #input {
+            position: absolute;
+        }
+        
+        #images {
+            padding-top: 200px;
+            text-align: center;   
+        }
+        
+        #actualimages {
+            display: inline-block;
+        }
+        
+        #break { 
+        }
+        
+    </style>
+</head>
+
+<body style="background:rgb(255,255,255)">
+    <div id=input>
+        team (pokedex #)<br>
+        [append a for alolan]<br>
+        [append f for female]<br>
+        [append s for shiny]<br> 
+        <input type=text id="pokemon 1" onchange="changepoke(this, 1)" value=1></input><br>
+        <input type=text id="pokemon 2"onchange="changepoke(this, 2)"></input><br>
+        <input type=text id="pokemon 3"onchange="changepoke(this, 3)"></input><br>
+        <input type=text id="pokemon 4"onchange="changepoke(this, 4)"></input><br>
+        <input type=text id="pokemon 5"onchange="changepoke(this, 5)"></input><br>
+        <input type=text id="pokemon 6"onchange="changepoke(this, 6)"></input><br><br><br>
+
+        background (rgb)<br>
+        <input type=text id="r" value=255 onchange="changebg()"></input><br>
+        <input type=text id="g" value=255 onchange="changebg()"></input><br>
+        <input type=text id="b" value=255 onchange="changebg()"></input><br><br>
+3x2?<br>
+<input type=checkbox id="align" onchange="swapalign(this)"></input>
+    </div>
+
+    <div id=images>
+        <div id=actualimages>
+            <img id=team1 src=http://serebii.net/sunmoon/pokemon/001.png></img><img id=team2 ><img id=team3 ><div id=break style="display:None"></div><img id=team4 ><img id=team5 ><img id=team6 >
+        </div>
+    </div>
+
+</body>
+
+<script type=text/javascript>
+
+    var changepoke = function(input, team_num) {
+        var poke = document.getElementById("team" + team_num);
+        var num = input.value;
+        var alolan = false;
+        var shiny = false;
+        var female = false;
+        if (num[num.length-1] == 's') {
+            shiny = true;
+            num = num.substr(0, num.indexOf("s"))
+        }
+        if (num[num.length-1] == 'f') {
+            female = true;
+            num = num.substr(0, num.indexOf("f"))
+        }
+        if (num[num.length-1] == 'a') {
+            alolan = true;
+            num = num.substr(0, num.indexOf("a"))
+        }
+        while (num.length < 3) {
+            num = "0" + num;
+        }
+        if (num <= 0 || (isNaN(num))) {
+            poke.src = ""
+        } else {
+        
+            var prefix = "http://www.serebii.net/"
+            
+            if (shiny) {
+                prefix += "Shiny/SM/"
+            } else {
+                prefix += "sunmoon/pokemon/"
+            }
+            
+            if (alolan) {
+                num += "-a"
+            }
+            
+            if (female) {
+                num += "-f"
+            }
+            
+            poke.src = prefix + num + ".png"
+         }
+    }
+    
+    var changebg = function() {
+        var r = document.getElementById("r").value;
+        var g = document.getElementById("g").value;
+        var b = document.getElementById("b").value;
+        if (isNaN(r) || r < 0 || r > 255 || isNaN(g) || g < 0 || g > 255 || isNaN(b) || b < 0 || b > 255) {
+            return;
+        }
+        document.body.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")"
+    }
+    
+    var swapalign = function(input) {
+        if (input.checked) {
+            document.getElementById("break").style["display"] = ""
+        } else {
+            document.getElementById("break").style["display"] = "None"
+        }
+    }
+
+</script>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<script type=text/javascript src=https://cdn.rawgit.com/rabbitgirl/07061aa0b14f2b761bccc96703c526eb/raw/ab70e5a67c0daaba08de68f521775c6893b236e1/template.js></script>
+<head>
+</head>
+
+<body style="background-color: #314456; display:none">
+
+            <p><em><b>telefrag</b> was developed in Spring of 2015 for my Foundations of Game Design course at Northeastern University. The goal of the assignment was a pretty freeform "make a game" assignment, with a focus on using what we had learned in class in regards to iteration and conscious game design. I enjoyed the project, and was pretty happy with how it turned out given the amount of of work that went into it. I'd like to return to it in the future, clean up some bugs, and make it a little bit more interesting. While the world isn't really wanting for fast-paced 2D arena games, I thought it was fun to work on nonetheless. My final report follows; the original is avaialable <a href ="https://dl.dropboxusercontent.com/u/18330644/Permanent/2015-04-xx%20Telefrag%20Design%20Doc.pdf">here</a> (.pdf). And since I don't have a lot of screenshots on hand, here is the (old) trailer I made for the game back when I was finishing up the project <a href = "https://www.youtube.com/watch?v=anmb0B-LXyI">(YouTube)</a>.</em></p>
+        
+        <br><h1>Motivation</h1>
+
+        <p>My main motivation with this project was two-fold. I wanted to create a fast-paced action game, since most of my previous games were either slower-paced or non-action games (RPGs, text adventures, etc.). I also wanted to research and develop my own 2D collision system for future projects, which I had experimented with in early 2014 but given up on pretty quickly. I also wanted to play with a game with really loose rules and see what happened - not necessarily emergent gameplay (I don't really have the time to create something with a huge toolset for players to explore), but maybe a very light version of it.</p>
+
+        <p>On a more general inspiration level, I've had the idea of an arena-style game focused around short-range teleportation kicking around since last October or so. I'm not sure where the idea of making a game around it came from, but the teleportation mechanic is something I've dug for a while, mostly based in a slew of late 90s/early 2000s anime I watched about people moving FASTER THAN THE EYE CAN SEE and having ridiculous, goofy fights while doing so. It's also rooted in (and gets it's name from) a mechanic in (mostly older) FPSs, where two players would teleport into the same space and automatically kill each other as a result, as well as a wide variety of hacks and cheats that less scrupulous players use to achieve these goals. This is also really goofy, and it seemed like ripe material for a fun little prototype.</p>
+
+        <br><h1>Design Methodology</h1>
+
+        <p>My design methodology was mostly informed by the MDA framework, which I first learned about in Rapid Idea Prototyping last semester. The central idea of the the "telefrag" was both a mechanical and an aesthetic consideration - it provides the main source of player death, and the teleportation was something I really wanted to make feel good and look fun, so players would be interested in playing an otherwise very simple game. Most of my actual design methodology, however, took a very dynamics-centric approach - the game is mechanically light and aesthetically simple, but once I had the teleportation figured out, I really wanted to make it interesting to use. I added different teleportation distances, teleportation chaining, and terrain that forced players to make decisions about how to best traverse the space without killing themselves as a result - I put a lot of focus on giving the players tools to move in a fun way, and encouraged them to take a lot of risks as a result.</p>
+
+        <br><h1>Original Design Concept</h1>
+
+        <p>My overarching design concept hasn't really changed from the get-go. Two or more players (theoretically; I don't really have the means to handle more than two players right now) move around a small arena populated with inert geometry and of fixed size. They have four options available to them: move left/right, jump, attack, and teleport. Players die if they are attacked, fall off of the screen, or teleport into part of the level geometry. Players are tasked with killing their opponent as much as possible, while not being killed or killing themselves in the process. The only major change in between my original concept creation and my first playtesting session was the addition of a second teleport of a longer distance, which was meant to add to the strategic choices available to the player.</p>
+
+        <br><h1>Design Iteration (Playtesting 1)</h1>
+
+        <p>My playtesting methodology for both sessions remained unchanged. I started the program, seated both of my playtesters in front of my laptop, and briefly told the the rules (what are the movement keys, what are the attack/jump/teleport keys, you die if you teleport into a wall or fall off screen, "go kill the other guy"). Beyond that, I let them play at their own pace and sat back to take notes and answer questions as they were asked; at about the three minute mark I would mention that I had other levels set up and ask if they wanted to switch (which they usually would). After about five or six minutes, players were usually ready to stop and provide feedback, after which I would see if anyone else was available and repeat the process.</p>
+    
+        <ul>
+            
+            <li>What did you want to test: I wanted to make sure my controls were easy to use and the game was easy to understand; I wanted to make sure all the moving parts still worked outside of my carefully controlled personal testing; I wanted to see how people besides me actually played the game!</li>
+            
+            <li>What you wish would happen (in an ideal world): Everything would work great and I would get a million dollars right away</li>
+            
+            <li>What really happened: People liked the game a bunch! But there were definitely some obvious fixes that needed to happen.</li>
+            
+            <li>What went right: The game was fun! Really fun. (Almost) nothing broke and people really got into it. There were lots of different styles at play, and people definitely took advantage of the teleportation in a whole bunch of different ways.</li>
+            
+            <li>What went wrong: One physics bug showed up. People didn't really seem to understand the two teleportation differences (a few people didn't get that there WAS teleportation, though I kind of attribute that to people not listening).  I got a whole bunch of feedback, and made changes as I could:
+
+                <ul>
+            
+                    <li>Fix that physics bug (done!)</li>
+            
+                    <li>Add lives or life/death counters (done!)</li>
+            
+                    <li>Change controls (this is something I kind of have to deal with until I can get USB controllers or a larger keyboard)</li>
+            
+                    <li>Add environmental hazards (done! one of the levels has bottomless pits)</li>
+            
+                    <li>Make smaller stages (considered and discarded)</li>
+            
+                    <li>Fix wall-hanging/keep wall-hanging (people seemed torn on whether to keep this "bug" in or not - I decided to keep it for now, since people like it and it's a tricky problem to solve)</li>
+            
+                    <li>Add randomized spawn points (done!)</li>
+            
+                    <li>Scrap two warps (planned but discarded, see below)</li>
+            
+                    <li>Add extra characters (considered and discarded due to time constraints)</li>
+            
+                    <li>Add a delay to warping (planned for some characters)</li>
+            
+                    <li>Let players attack while moving (done!)</li>
+                
+                </ul>
+                
+            </li>
+        
+        </ul>
+
+        <br><h1>Design Iteration (Playtesting 2)</h1>
+
+        <p>Again, my methods for testing my second iteration were almost unchanged. I actually ran two smaller sessions for my second iteration - the first was after the group I was playtesting with on 4/17 finished early, and was open for a short session, and the second was at home, with my mother and sibling.</p>
+
+            
+        <ul>
+        
+            <li>What did you want to test: In addition to pushing my goals from the first session, I was also interested in seeing how inexperienced players with little digital game experience responded to the game.</li>
+
+            <li>What you wish would happen (in an ideal world): Ultimately, I was just hoping for some kind of difference in my results with the two groups.</li>
+
+            <li>What really happened: My reception was pretty warm again! I got differing opinions based on my groups, but both of them enjoyed the game.</li>
+
+            <li>What went right: People enjoyed the game. My more experienced group didn't really have anything to offer besides, again, adding more characters (which I scrapped due to time issues), while my less experienced group proved surprisingly adept at finding exploits and bugs.</li>
+
+            <li>What went wrong: Multiple physics bugs showed up (surprisingly, more than in any previous session). While it's always nice to find holes in the game to fix, physics bugs that I don't really understand are a lot less enjoyable. And, my feedback (aggregated from both sessions):
+
+                <ul>
+
+                    <li>Add extra characters (considered and discarded due to time constraints)</li>
+
+                    <li>Aesthetics were nice (liked gore, clean design, cute characters)</li>
+
+                    <li>Accidentally teleporting into walls without dying is still possible (needs hitbox refining)</li>
+
+                    <li>Liked enclosed space in level 2</li>
+
+                    <li>Walls should be thicker; being able to slice through walls doesn't work well</li>
+
+                    <li>Gore should increase with kills (courtesy of Mom)</li>
+
+                </ul>
+
+            </li>
+        
+        </ul>
+        
+        <br><h1>Reflection (Game Design Workshop)</h1>
+
+        <p>One of the most important lessons I learned from Game Design Workshop was learning to diversify the kind of people I playtested with. Most of my playtesting previous had been with peers or very close friends - almost always people who had some kind of prior gaming experience. Game Design Workshop brings up, in Chapter 9, the importance of finding a broad selection of playtesters, which is something I tried for during my second playtesting session. A diverse set of playtesters is essential not only for introducing new concepts and points of view, but most importantly for dissolving our biases. As game players and designers, we tend to constantly reinforce a narrow set of beliefs and assume that our players have the same level of skill and knowledge as we and our peers do. Finding inexperienced players (like, in my case, my mom and sibling) is important for not only finding edge cases that my normal players wouldn't necessarily run into, but also discovering how natural and intuitive my mechanics might and might not be.</p>
+
+        <p>The other main takeaway I got from Game Design Workshop was thinking consciously about balance (Chapter 10). My previous games have all been singleplayer or AI focused affairs, which don't really require me to think about balance in the same way. By contrast, Telefrag has been developed from the ground up to be a multiplayer game, and that necessitates a greater amount of thought about balance. Luckily for me, the game (at least in it's current state) is ultimately symmetrical - both players have the same abilities, starting positions, and objectives, and with the exception of a small advantage on a code level (which I plan to get rid of anyways), neither player has any advantage over the other. The most important consideration was randomized spawn positions and adding invulnerability periods for respawning characters, in order to minimize spawn camping (see Reinforcing Relationships, p. 288).</p>
+
+        <br><h1>Reflection (Rules of Play)</h1>
+
+        <p>While the Rules of Play readings weren't necessarily helpful in the early design process, it's easy to reflect on my designs thus far (and in the future) using the readings. Although my game isn't particularly complex mechanically, we can read my game based on the three kinds of rules laid out in Chapter 12. To wit, the Operational rules of my game are simple. Two players control a character each, and are given an arena of level geometry that they can move around in. Walls and floors bound their movement, and they are able to kill one another with a short-range melee attack. Both players can teleport to evade or approach each other, but are killed if they teleport into a wall. No explicit win or lose condition closes the game. The Constituative rules are the actual code of my game, and all the miscellaneous timers and non-explicit rules that dictate the flow of the game (the small delay between teleports, the momentum a player carries while attacking, etc, etc). The Implicit rules are a bit more difficult to define, especially given the small audience and short time that the game has been playable; implicit rules generally develop over time and reflect the cultural contexts of the game and players. The only rule I can think of at the moment is the generally well-understood concept that spawn-camping (that is, killing a player as soon as they respawn) is an asshole move, but since I have mechanics in place to combat that situation, I'm not sure that it really still counts as implicit.</p>
+
+        <p>Lastly, I'd like to take a look at Chapter 21, which is about rule-breaking, which I find esepcially applicable to my game. As I've mentioned before, my earliest motivations for this game were rooted in bugs and hacks in old FPSs that would kill players if they got stuck inside a wall or each other, and while my game doesn't treat this as cheating, I think this is related to the last part of the Chapter, which talks about planned cheating as a game design practice. My game is more about adapting methods of cheating from other games, but I think it still fits.</p>
+
+        <br><h1>Reflection (Activities and Projects)</h1>
+
+        <p>I generally liked the activities and projects we did in this class, but my main takeaway from it wasn't exactly encouraging. Looking back over each of the projects for this semester, in conjunction with my work in my Game Programming class, the main thing I learned is that I'm a lot more productive by myself than I am in a group. The solo projects I've worked on - the book report, my final project, and my individual work in Game Programming - ended up more polished and more complete than any of my group work in either class, which probably doesn't bode well for a career in game design. While I sometimes enjoy working in a group, especially if it's with people that I click with, I think that the greatest issue was keeping on top of deadlines and staying in communication with my group mates. Most of the time, the bulk of our work ended up getting done just before the assignments were due, and I think a large part of that was due to the environment we worked in. Instead of all coming to the same workplace every day, we met in a classroom twice a week, and most of our time was spent working on other projects. Getting everyone to agree on a time and place to meet was difficult, and getting people to work on projects independently was even harder.</p>
+
+            <p>Nonetheless, I really did like most of the projects we did in class (the only exception was the Escape the Room project, which I had trouble with due to an uncooperative partner and an absence). One problem I had with most of the projects was finding a proper focus. We were given a lot of freedom with how we could tackle each project, but I felt that our actual goals weren't really clear at first (mostly with regards to the LARP and Handwashing projects). I think they turned out pretty nice in the end, but the initial development project was probably a lot harder than it needed to be. That said, the flexibility we were given with which to tackle each project was nice, and each group i was part of was able to find their own balance of genre, mechanics, and narrative as they wanted. Each person I worked with brought different perspectives to the table, and we could accommodate them accordingly. So while I would've liked a little bit more direction, the ability to explore and find out where we stand as game designers was nice too.</p>
+
+</body>
+</html>

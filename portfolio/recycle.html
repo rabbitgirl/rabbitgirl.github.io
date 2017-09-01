@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<script type=text/javascript src=https://cdn.rawgit.com/rabbitgirl/07061aa0b14f2b761bccc96703c526eb/raw/ab70e5a67c0daaba08de68f521775c6893b236e1/template.js></script>
+<head>
+</head>
+
+<body style="background-color: #314456; display:none">
+
+        <p><em><b>Recycle</b> was developed in Fall of 2014 for my Rapid Idea Prototyping for Games course at Northeastern University. The goal of the assignment was to create a game (digital or analog) focused around a selection from a list of underrepresented verbs in games. I chose to structure my game around "recycle." My iterative reports are as follows; my original notes are available <a href ="https://dl.dropboxusercontent.com/u/18330644/Permanent/10-27-14%20Recycling%20Notes%201%20for%20GAME3700.rtf">here</a> (.rtf).</em></p>
+
+        <br><h1>iteration 1</h1>
+        
+        <p>My game is focused on the idea of constantly recycling and reusing resources. My original plan was to focus on the concept of diminishing returns - starting with a finite pool of resources and, instead of gaining more, trying to lose them as slowly as possible by recycling what you'd already used. While I couldn't find a way to represent that and keep the game fun in time for class on Tuesday, I'm not giving up on the idea, and I want to try it again in future iterations.</p>
+
+        <p>For Tuesday's class, I ended up working on the actual act of sorting and recycling, by taking "junk cards" (a shuffled deck) and trying to recycle them into a more cleanly organized deck. The game rules are:</p>
+
+        <ul>
+            
+            <li>Two players and one playing card deck required.</li>
+            
+            <li>Each player gets half of a normal playing card deck - each player gets all of a red suit and a black suit.</li>
+            
+            <li>Each player maintains three piles: a draw pile, a discard pile, and a recycled pile.</li>
+            
+            <li>At the start of the game, each player shuffles their cards, places them in the draw pile, and draws six cards.</li>
+            
+            <li>The game is focused around playing pairs of cards against each other, with the goal of "winning" each turn and sending your cards to the recycle pile. When all of a player's cards have been sent to the recycle pile, they win!</li>
+            
+            <li>Each turn goes as follows:
+            
+                <ul>
+                    
+                    <li>Each player draws as many cards from their draw pile as they need to keep six in their hand.</li>
+                    
+                    <li>Each player plays two cards, one face-down, one face-up.</li>
+                    
+                    <li>If a player wishes, they can swap the top card from their recycle pile with their face-up card, while the face-up card gets discarded.</li>
+                    
+                    <li>When both players are ready, both pairs cards are turned face up.</li>
+                    
+                    <li>Whoever has the highest value adds their cards to their recycle pile, and their opponent adds their cards to their discard pile.
+                    
+                    <li>If a pair of cards are of the same suit (an 8 of hearts and a 4 of hearts), the pair is worth the value of both cards added together (12).</li>
+                    
+                    <li>If a pair of cards are of different suits (an 8 of hearts and a 4 of clubs), the pair is worth the value of the higher card (8).</li>
+                    
+                    <li>If there is a tie, each player plays a random card from their hand. Whoever has the highest card wins, regardless of suit; if there's another tie, players continue to draw until there's a victor.</li>
+                </ul>
+                    
+            <li>When a player's draw pile is empty, their discard pile is reshuffled and used as the new draw pile.</li>
+        
+        </ul>
+
+        <img src="http://static.tumblr.com/xi4q7k3/yeGnn2u4s/1.jpg">
+        
+        <p><em>A playtesting session.</em></p>
+
+        <p>During testing, there were several issues addressed that needed to be changed to keep the game fun.</p>
+    
+        <ul>
+            
+            <li>I originally had planned to have several pairs queued up at once to add some strategic depth, but it didn't really work in practice - it was hard to explain and slowed the game waaay down. I'd like to give it another shot, but I think it'd only work if I tried to make it digital.</li>
+            
+            <li>Aces as a low card meant that each player tended to end up with a hand full of aces at the end of the game, with no real way to get rid of them. We decided to keep aces low, but that a pair of aces automatically won against any other pair, just to keep things interesting.</li>
+            
+            <li>The recycling mechanic was meant to add some risk/reward to your hand - potentially win against your opponents pair and recycle two cards, but with a net-gain of one; or lose against your opponents pair and have a net-loss of three cards. But the original plan of taking any card from your recycle pile was severely overpowered and exploitable. The solution was to keep one card from your recycle pile face-up, which was available to the player at any time. After the card was used, the recycle pile was reshuffled, and a new card was chosen. This way, both players knew how good their opponent's card COULD be, and there was no way to constantly draw powerful cards from the recycle pile.</li>
+                
+            <li>Since recycling cards made your hand+draw pile an uneven number, the win condition was adjusted to having recycled all your cards OR all your cards but one.</li>
+                    
+        </ul>
+
+        <img src="http://static.tumblr.com/xi4q7k3/XOCnn2uag/2.jpg">
+        
+        <p><em>The first prototype, experimenting with the (momentarily shelved) queued stacks of cards.</em></p>
+
+        <p>Ultimately, I think there's a good core to a game here, but the real challenge is going to be expanding it out further. I'm considering a digital prototype, since the game was a little difficult to manage as is, and something digital seems better suited to more intense resource management. Before that, however, I need to figure out how to make everything work together, and to better emphasize the "recycle" core of the game.</p>
+
+        <br><h1>iteration 2</h1>
+
+        <p>For my second iteration, I focused on streamlining the core gameplay, implementing some changes made during my last playtesting session, addressing some balancing issues, and trying to put more emphasis on the "recycling" aspect of the game. The new rules are as follows:</p>
+    
+        <ul>
+             
+            <li>Two players and one playing card deck required.</li>
+            
+            <li>Each player gets half of a normal playing card deck - all of a red suit and a black suit.</li>
+            
+            <li>Each player maintains three piles: a draw pile, a discard pile, and a recycled pile.</li>
+            
+            <li>At the start of the game, each player shuffles their cards, places them in the draw pile, and draws six cards.</li>
+            
+            <li>The game is focused around playing pairs of cards against each other, with the goal of "winning" each turn and sending your cards to the recycle pile. When all of a player's cards have been sent to the recycle pile (or all except one), they win!</li>
+            
+            <li>Each turn goes as follows:
+            
+                <ul>
+                
+                    <li>Each player draws as many cards from their draw pile as they need to keep six in their hand.</li>
+                 
+                    <li>Each player plays two cards face down.</li>
+                 
+                    <li>Once both players have laid their cards down, they each turn their top card over.</li>
+                 
+                    <li>If a player wishes, they can swap their active recycle card with the top card they've played. The card they swap out goes back into their hand.</li>
+                 
+                    <li>Once both players that want to recycle have had their chance, all played cards get flipped over.</li>
+                
+                    <li>Whoever has the highest value adds their cards to their recycle pile, and their opponent adds their cards to their discard pile.
+                
+                    <li>If a pair of cards are of the same suit (an 8 of hearts and a 4 of hearts), the pair is worth the value of both cards added together (12).</li>
+                
+                    <li>If a pair of cards are of different suits (an 8 of hearts and a 4 of clubs), the pair is worth the value of the higher card (8).</li>
+                 
+                    <li>If there is a tie, each player plays a random card from their hand. Whoever has the highest card wins, regardless of suit; if there's another tie, players continue to draw until there's a victor.</li>
+                 
+                    <li>Aces are low, but a pair of aces beats any other pair of cards.</li>
+                
+                </ul>
+                 
+            <li>If a player recycled a card, they reshuffle their recycle pile and make a new card active. Their active card stays face up next to the recycle pile. If a player has recycled their first set of cards, they can choose either card to be active.</li>
+                 
+            <li>When a player's draw pile is empty, their discard pile is reshuffled and used as the new draw pile.</li>
+        
+        </ul>
+
+        <p>The main changes to this game were:</p>
+            
+        <ul>
+         
+            <li>Cutting the size of the playing card deck in half. The game moved too slowly as it was, and chopping it in half not only made the game move much faster, it also removed some ambiguity about suits - cards were less about figuring how four suits worked together, and more about a simple red/black dichotomy.</li>
+         
+            <li>Scrapping the queue system entirely. While I still like the idea in concept, and even though I thought it was fun narratively (I had envisioned it as an assembly-line style thing in a recycling plant), it really doesn't work for this game at all, and the game was a lot better off without it.</li>
+         
+            <li>Streamlining recycling. The recycling is kind of the core of the game (otherwise, it's just kind of a more complex War), and I think the new system really helps to keep things moving.</li>
+        
+            <li>Altered turn order. The new system of a single pair of cards forces players to act simultaneously, and removes the advantage that whoever goes second might have had.</li>
+                
+        </ul>
+
+        <img src="http://static.tumblr.com/xi4q7k3/EZLnn2ubu/3.jpg">
+        
+        <p><em>Playing at home.</em></p>
+
+        <p>Some feedback:</p>
+
+        <ul>
+         
+            <li>The game is still missing something. In the words of my sibling, "It's ok, but I can't see myself playing it more than once or twice." They also said I should make it more like Yu-Gi-Oh, but I'm ignoring that.</li>
+         
+            <li>Ties should send cards to the recycle pile instead of discarding; at present, this just kind of artificially extends the game's length. (Concern: what if the last two cards in a deck tie?)</li>
+            
+            <li>As it is, the strategy is kind of simplistic, and it's very luck based. I already have plans to address this in my next iteration.</li>
+               
+        </ul>
+
+        <p>Moving forward: my next prototype is going to be my first digital prototype. I want to really take advantage of the non-physicality of the game and do what I can to speed it up and to implement some mechanics that I couldn't do in a physical prototype.</p> 
+
+        <br><h1>iteration 3</h1>
+
+        <p>For my third iteration, I made the transition to a digital prototype. I had a lot of plans for the digital version, and while some of them fell through, I think I at least made the first steps towards accomplishing what I wanted to. My digital implementation has two modes - the first is a pretty direct translation of the last digital prototype, but the second is very different. The game rules are as follows:</p>
+
+        <ul>
+            
+            <li>One player required. The human player plays against a rudimentary AI.</li>
+        
+            <li>Each "player" gets half of a normal playing card deck - all of a red suit and a black suit.</li>
+        
+            <li>Each player maintains four piles: a draw pile, a discard pile, recycled pile, and an active recycle pile.</li>
+        
+            <li>At the start of the game, each player shuffles their cards, places them in the draw pile, and draws six cards.</li>
+       
+            <li>The bottom part of the screen is focused on the card interplay, while the very top of the screen is a battleground of sorts. The game is focused around playing pairs of cards against each other, with the goal of "winning" each turn and sending your cards to the recycle pile. Recycled cards can be spent to build units on the battleground to defend your base against randomly spawning enemy units; destroyed units reintroduce the cards you spent on them to your draw pile. The goal is simply to stay alive as long as possible.</li>
+        
+            <li>Each turn on the bottom screen goes as follows:
+            
+                <ul>
+        
+                    <li>Each player draws as many cards from their draw pile as they need to, up to six cards in your hand.</li>
+        
+                    <li>Each player plays two cards face down (using the 1-6 keys).</li>
+        
+                    <li>Once both players have played their cards, their top cards flip over for each player to see.</li>
+        
+                    <li>If a player wishes, they can swap their active recycle card with the top card they've played (using w to recycle, and e to skip). The card they swap out goes into the discard pile.</li>
+        
+                    <li>Once both players that want to recycle have had their chance, all played cards get flipped over.</li>
+        
+                    <li>Whoever has the highest value adds their cards to their recycle pile, and their opponent adds their cards to their discard pile.
+            
+                        <ul>
+        
+                            <li>If a pair of cards are of the same suit (an 8 of hearts and a 4 of hearts), the pair is worth the value of both cards added together (12).</li>
+        
+                            <li>If a pair of cards are of different suits (an 8 of hearts and a 4 of clubs), the pair is worth the value of the higher card (8).</li>
+        
+                            <li>If there is a tie, each player plays a random card from their hand. Whoever has the highest card wins, regardless of suit; if there's another tie, players continue to draw until there's a victor.</li>
+        
+                            <li>Aces are low, but a pair of aces beats any other pair of cards.</li></ul>
+        
+                    <li>If a player recycled a card, they reshuffle their recycle pile and make a new card active. Their active card stays face up next to the recycle pile. If a player has recycled their first set of cards, they can choose either card to be active.</li>
+        
+                    <li>When a player's draw pile is empty, their discard pile is reshuffled and used as the new draw pile.</li>
+        
+                    <li>When the human player has run out of cards to play, their only choice is to wait until some of their units have been destroyed and they get back the cards they've spent.</li>
+                
+                </ul>
+        
+            <li>The top part of the screen runs in real time.
+        
+            <li>On the left is the human player's "base," with a health meter right next to it. Units that the player spawns appear next to the base, and march to the right side of the screen as far as possible. Likewise, units that the NPC spawns appear on the right side of the screen, and march to the left until they reach the human base.</li>
+        
+            <li>If a player has four or more cards in their recycle pile, they can press Q at any point to spend recycled cards and spawn a unit on their side. The type of unit spawned depends on the cards spent; more black cards spawn air units, more red cards spawn artillery, and equal red and black cards spawn ground units.</li>
+        
+            <li>Enemy units that reach the player's base will begin attacking it and draining the base's health. Once the player has no health left, they lose the game.</li>
+        
+            <li>Enemy units that reach each other will stop moving and begin attacking. Units have a rock-paper-scissors effect: air units beat ground units, ground units beat artillery, and artillery beat air. It is up to the player to analyze the units they are fighting against and try to create the appropriate units as necessary.</li>
+        
+        </ul>
+
+        <img src="http://static.tumblr.com/xi4q7k3/G61nn2ucl/4.gif">
+        
+        <p><em>An early point in this iteration. The player's hand is on the bottom, the bottom left card is the active recycle card, the mid-left deck is the recycle pile, the bottom-right deck is the draw pile, and the mid-right deck (currently empty) is the discard pile. At the very top is the NPC's hand (invisible to the player), and in the middle are the currently played cards. This screenshot doesn't have any of the combat stuff implemented.</em></p>
+
+        <img src="http://static.tumblr.com/xi4q7k3/sUlnn2ue6/5.jpg">
+        <p><em>Playtesting.</em></p>
+
+        <p>Feedback:</p>
+            
+        <ul>
+            
+            <li>While playtesting, I realized I never figured out what to do when the NPC ran out of cards. The human player can't really run out, since any cards that leave their deck eventually get back into it as soon as the unit the cards were spent on was destroyed. Since enemy units are generated randomly, instead of being built using NPC cards, the NPC can run out of cards very easily. A solution is needed.</li>
+            <li>The recycling dynamic isn't really well communicated. Two main problems:
+            <li>The standard playing card suits don't really mesh with the theme of the game that well. I was planning on changing these anyways, but I really have to make sure to fix them for the last iteration.</li>
+            <li>The flow of the game is really confusing - way more so than in the physical prototypes. A lot of the problem, IMO, lies from the lack of animation - cards just sort of appear in the deck they're moved to. The next iteration really needs to focus on visual clarity. </li>
+        
+        </ul>
+
+        <br><h1>final iteration</h1>
+
+        <p>The last iteration mostly focused on aesthetic changes. With the exception of two core changes, the mechanics were mostly untouched - nearly all of the work for this iteration was sent rewriting huge chunks of code to facilitate the new animations and make things easier to understand. The rules, again, are as follows:</p>
+
+        <ul>
+            
+            <li>One player required. The human player plays against a rudimentary AI.</li>
+            
+            <li>Each "player" gets 39 cards - 13 cards, ace through king, of a metal, glass, and wood suit.</li>
+            
+            <li>Each player maintains four piles: a draw pile, a discard pile, recycled pile, and an active recycle pile.</li>
+            
+            <li>At the start of the game, each player shuffles their cards, places them in the draw pile, and draws six cards.</li>
+            
+            <li>The bottom part of the screen is focused on the card interplay, while the very top of the screen is a battleground of sorts. The game is focused around playing pairs of cards against each other, with the goal of "winning" each turn and sending your cards to the recycle pile. Recycled cards can be spent to build units on the battleground to defend your base against randomly spawning enemy units; destroyed units reintroduce the cards you spent on them to your draw pile. The goal is simply to stay alive as long as possible.</li>
+            
+            <li>Each turn on the bottom screen goes as follows:
+            
+                <ul>
+        
+                    <li>Each player draws as many cards from their draw pile as they need to, up to six cards in your hand.</li>
+        
+                    <li>Each player plays two cards face down (using the 1-6 keys).</li>
+        
+                    <li>Once both players have played their cards, their top cards flip over for each player to see.</li>
+        
+                    <li>If a player wishes, they can swap their active recycle card with the top card they've played (using w to recycle, and e to skip). The card they swap out goes into the discard pile.</li>
+        
+                    <li>Once both players that want to recycle have had their chance, all played cards get flipped over.</li>
+        
+                    <li>Whoever has the highest value adds their cards to their recycle pile, and their opponent adds their cards to their discard pile.
+            
+                        <ul>
+        
+                            <li>If a pair of cards are of the same suit (an 8 of hearts and a 4 of hearts), the pair is worth the value of both cards added together (12).</li>
+        
+                            <li>If a pair of cards are of different suits (an 8 of hearts and a 4 of clubs), the pair is worth the value of the higher card (8).</li>
+        
+                            <li>If there is a tie, each player plays a random card from their hand. Whoever has the highest card wins, regardless of suit; if there's another tie, players continue to draw until there's a victor.</li>
+        
+                            <li>Aces are low, but a pair of aces beats any other pair of cards.</li>
+                        
+                        </ul>
+        
+                    <li>If a player recycled a card, they reshuffle their recycle pile and make a new card active. Their active card stays face up next to the recycle pile. If a player has recycled their first set of cards, they can choose either card to be active.</li>
+        
+                    <li>When a player's draw pile is empty, their discard pile is reshuffled and used as the new draw pile.</li>
+        
+                    <li>When the human player has run out of cards to play, their only choice is to wait until some of their units have been destroyed and they get back the cards they've spent.</li>
+        
+                    <li>When the NPC has run out of cards to play, the Player's health is partially replenished, and the NPC gets a new deck of cards.</li>
+                
+                </ul>
+        
+            <li>The top part of the screen runs in real time.
+        
+            <li>On the left is the human player's "base," with a health meter right next to it. Units that the player spawns appear next to the base, and march to the right side of the screen as far as possible. Likewise, units that the NPC spawns appear on the right side of the screen, and march to the left until they reach the human base.</li>
+        
+            <li>If a player has three or more cards in their recycle pile, they can press Q at any point to spend recycled cards and spawn a unit on their side. The type of unit spawned depends on the cards spent; more wood cards spawn air units, more glass cards spawn artillery, more metal cards spawn ground units, and one of each results in a random unit.</li>
+        
+            <li>Enemy units that reach the player's base will begin attacking it and draining the base's health. Once the player has no health left, they lose the game.</li>
+        
+            <li>Enemy units that reach each other will stop moving and begin attacking. Units have a rock-paper-scissors effect: air units beat ground units, ground units beat artillery, and artillery beat air. It is up to the player to analyze the units they are fighting against and try to create the appropriate units as necessary.</li>
+        
+        </ul>
+
+        <img src="http://static.tumblr.com/xi4q7k3/Ay3nn2uer/6.png">
+        
+        <p><em>A screenshot. The player hasn't played any cards yet, and two artillery units at the top are about to start fighting.</em></p>
+
+        <p>The main mechanical change was altering the suits of the cards and how they were recycled. In keeping with the core of the game, I made the jump from two suits - one red and one black - to three suits - wood, glass, and metal - that more closely fit with the recycling theme. This, of course, changed how the units created were determined, with a little more thought put into how the materials correlate to the units created.</p>
+
+        <p>The other mechanical change was adding a health boost when the NPC runs out of cards - I thought this seemed like an appropriate choice, since the human player would've had to have been playing for a while to reach that point anyways. In addition, it could create a potentially risky strategy, where a player might intentionally burn a bunch of cards to let the NPC use up theirs, giving them a health boost in return.</p>
+
+        <p>Beyond the mechanics, though, the most important update was the addition of animations, helper graphics, and recycle pile tracking, all of which help to make the game more clear. As follows:</p>
+    
+        <ul>
+        
+            <li>Cards now glide from the deck they're in to the deck they're moved to, instead of just appearing there. Not only is it a lot cooler to watch cards flit around the screen, it's a lot easier to actually tell where cards are going and where they're coming from, allowing the game to move just a bit faster.</li>
+       
+            <li>The (previously empty) boxes on the left side of the screen are now used as indicators for helping with unit creation. The top box is a graphic indicating what, when the q button is pressed, kind of unit will be created. In the future, I'd love for these to be actual pictures, but I was kind of pressed for time.</li>
+        
+            <li>The bottom, narrow box is used to track the last seven cards recycled. This is mostly used to let players plan ahead and see how the next cards they recycle will alter the units they can create.</li>
+        
+            <li>There's some text in the upper right screen giving basic instruction and a play-by-play of the card part of the game. This was previously printed to console, but I really felt that having it on screen would be easier to read and more beneficial to the player while they were starting out.</li>
+                
+        </ul>
+
+        <p>I didn't get any solid feedback this time because class was really casual.</p>
+
+        <img src="http://static.tumblr.com/xi4q7k3/SGhnn2uf9/7.png">
+        
+        <p><em>Another screenshot. Visible are the next unit indicator (an artillery unit) and the list of the most recently recycled cards, from right to left (a metal, a metal, and a glass build an artillery).</em></p>
+
+        <br><h1>reflection</h1>
+
+        <p>I still really like this idea. There were definite stumbling points, but I think the core of the game has a lot of potential, and I really want to develop the idea beyond the class. I really think the game would work best as a flashy, over the top arcade-ish game - not only because I love that entire aesthetic, but because I think the interplay of faster, reflex-based unit creation and management meshes really nicely with the more strategic and slower pull of the card game.</p>
+
+        <p>I'd also like to flesh out the unit types. I'd really hoped to have gotten this done by the final iteration, but it would've required rewriting even more code than I already had, and I really just didn't have the time. I did have time to write out what I THOUGHT would work in my notes, but like a lot of things, they never made it into the final iteration. I'd like to expand on different game modes, add characters (maybe with special abilities? Or maybe just as visual flair), make things move faster and more clearly, and add some kind of a tutorial.</p>
+
+        <p>I don't really know how well I hit the "recycling" thing. I think that mechanically, it works okay, but I'd really like to build on the aesthetic theming moving forward. Really make sure that all my characters and units have a junky, cobbled together from spare parts sort of feel. </p>
+
+        <p>I'm also really disappointed I never got to add music. I wrote a few tracks [<a href="http://blog.rabbitgirl.me/post/101389962078/im-working-on-music-for-two-game-finals-this">1</a>][<a href="http://blog.rabbitgirl.me/post/101879525833/more-game-music-some-kind-of-a-results-screen">2</a>] back when I was starting work on the digital prototype, but never had time to get together a wider selection of music or figure out how to get audio working in my engine. Again - something to work on in the future.</p>
+
+        <p>All in all, I'm pleased with how the project came together, but wish I had done more.</p>
+    
+</body>
+</html>

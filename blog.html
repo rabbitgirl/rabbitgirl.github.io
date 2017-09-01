@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+    
+    <Title>@ ____ @</title>
+    
+    {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    
+    <link rel=stylesheet href="http://static.tumblr.com/xi4q7k3/hiunujmpz/main.css">
+    
+<style type="text/css">
+    
+/* ask/submit/tags row */
+#toplinks {
+    font-family: square;
+    font-size: 8px;
+    padding: 0px 0px 0px 5px;
+    margin-top: -15px;
+}
+
+/* date+notes bubble */
+#statbubble {
+    position: relative;
+    width: 70px;
+    text-align: right;
+    margin-left: -81px;
+    top:40px;
+    padding: 10px 7px 2px 5px;
+    line-height: 1px;
+    background: url('http://static.tumblr.com/xi4q7k3/Wxdmnp2s1/notebox.gif') no-repeat;
+    overflow:visible;
+}
+
+/* content */
+#post {
+    padding: 0px 0px 0px 5px;
+}
+    
+#quotesource {
+    text-align: right;
+}
+
+/* post divider */
+#break {
+    border-bottom:1px solid #000;
+    margin-top: -2px;
+}
+
+
+            /* CLASSES+CONTENT CSS */
+
+/* notes+dates text */
+a.stat {
+    font-family: 'square';
+    color: #000;
+    font-size:8px;
+    line-height: 1.3em;
+    text-decoration: none;
+}
+    
+/* tag text */
+a.tag {
+    padding: 5px 0px 0px 0px;
+    font-size:8px;
+    line-height:10px;
+    font-family: square;
+    color: #000;
+    line-height: 1.2em;
+    text-decoration: none;
+    max-width:500px;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    text-decoration: none;
+    text-transform:lowercase;
+    text-shadow: 1px 0px white, -1px 0px white;
+}
+    
+/* post titles */
+h3 {
+    font-weight: bold;
+    font-size:14px;
+    margin-top: 5px;
+}
+
+/* link titles */
+h3 a {
+    text-decoration:none;
+}
+
+/* quote source */
+h4 {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+img.filter {
+    position: fixed;
+    border: none;
+}
+
+ol.notes {
+    padding: 0px;
+    margin: 25px 0px;
+    list-style-type: none;
+    border-bottom: 1px {color:text};
+}
+
+iframe {
+    max-width: 480px;
+}
+
+iframe.photoset {
+    max-width: 490px;
+    margin-bottom:5px;
+}
+
+blockquote {
+    padding: 0px 0px 0px 5px;
+    margin-left: 10px;
+    border-left: 1px solid #ccc;
+}
+    
+iframe {
+    display: block;
+}
+
+/* firefox fixes */
+@-moz-document url-prefix() {
+    a.tag {
+        font-size: 8px;
+        letter-spacing: -1px};
+}    
+
+</style>
+
+</head>
+
+<body>
+
+<div id="body">
+<div id="sidebar">
+
+    <a href="http://rabbitgirl.me"><img src="http://static.tumblr.com/xi4q7k3/mdKmnp2ju/home1.png" class=sidebar onmouseover="this.src='http://static.tumblr.com/xi4q7k3/jSymnp2ln/home2.png'" onmouseout="this.src='http://static.tumblr.com/xi4q7k3/mdKmnp2ju/home1.png'" /></a>
+    <br>
+    <a href="http://rabbitgirl.me/about"><img src="http://static.tumblr.com/xi4q7k3/JeWmnp2eh/about1.png" class=sidebar onmouseover="this.src='http://static.tumblr.com/xi4q7k3/BYhmnp2fk/about2.png'" onmouseout="this.src='http://static.tumblr.com/xi4q7k3/JeWmnp2eh/about1.png'" /></a>
+    <br>
+    <a href="http://music.rabbitgirl.me"><img src="http://static.tumblr.com/xi4q7k3/Qkkmnp2oh/music1.png" class=sidebar onmouseover="this.src='http://static.tumblr.com/xi4q7k3/EnNmnp2qm/music2.png'" onmouseout="this.src='http://static.tumblr.com/xi4q7k3/Qkkmnp2oh/music1.png'" /></a>
+    <br>
+    <a href="http://blog.rabbitgirl.me"><img src="http://static.tumblr.com/xi4q7k3/sKTmnp2h0/blog1.png" class=sidebar onmouseover="this.src='http://static.tumblr.com/xi4q7k3/acbmnp2ib/blog2.png'" onmouseout="this.src='http://static.tumblr.com/xi4q7k3/sKTmnp2h0/blog1.png'" /></a>
+    <br>
+    <a href="http://rabbitgirl.me/links"><img src="http://static.tumblr.com/xi4q7k3/ZkGmnp2my/links1.png" class=sidebar onmouseover="this.src='http://static.tumblr.com/xi4q7k3/8a7mnp2nn/links2.png'" onmouseout="this.src='http://static.tumblr.com/xi4q7k3/ZkGmnp2my/links1.png'" /></a>
+    
+</div>
+
+    <img src="http://static.tumblr.com/xi4q7k3/njbnbqv5h/header.gif" 
+    class=header>
+
+    <div id="toplinks">
+        art, music, inspiration /
+        <a href="/ask">ask</a>  /
+        <a href="/submit">submit</a>
+    </div>
+
+
+{block:Posts}
+
+    <div id="statbubble">
+    
+        <a href="{Permalink}" class=stat> 
+            {NoteCount}<br>
+            {MonthNumberWithZero}/{DayOfMonthWithZero}/{Year}
+        </a>
+        
+    </div>
+
+    <div id="post">
+    
+         
+        {block:Text}
+                 
+            {block:Title}
+                <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+
+            {Body}
+                 
+        {/block:Text}
+
+
+        {block:Photo}
+
+            {LinkOpenTag}
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+            {LinkCloseTag}
+
+            {block:Caption}
+                {Caption}
+            {/block:Caption}
+        
+        {/block:Photo}
+
+
+        {block:Photoset}
+                    
+            {Photoset-500}
+
+            {block:Caption}
+                {Caption}
+            {/block:Caption}
+                   
+        {/block:Photoset}
+
+
+        {block:Quote}
+                   
+            "{Quote}"
+
+            {block:Source}
+                <h4>- {Source}</h4>
+            {/block:Source}
+                    
+        {/block:Quote}
+
+
+        {block:Link}
+                
+            <h3><a href="{URL}" class="link" {Target}>{Name}</a></h3>
+
+            {block:Description}
+                {Description}
+            {/block:Description}
+                  
+        {/block:Link}
+
+
+        {block:Chat}
+                        
+            {block:Title}
+                <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+                        
+            {block:Lines}
+            
+                {block:Label}
+                    <b>{Label}</b>
+                {/block:Label}
+                
+                {Line}<br>
+            
+            {/block:Lines}
+                
+        {/block:Chat}
+
+
+        {block:Video}
+                    
+            {Video-500}
+
+            {block:Caption}
+                {Caption}
+            {/block:Caption}
+                   
+        {/block:Video}
+
+
+        {block:Audio}
+                    
+            {AudioPlayerBlack}{block:PlayCount}Played {FormattedPlayCount} times.{/block:PlayCount}
+
+            {block:Caption}
+                {Caption}
+            {/block:Caption}
+                    
+        {/block:Audio}
+
+
+        <div class="h2">
+        
+            {block:HasTags}
+                {block:tags} 
+                    <a href="{tagURL}" class=tag>#{tag}.</a>
+                {/block:tags} &nbsp;
+            {/block:HasTags} 
+            
+            {block:RebloggedFrom}
+                <a href="{ReblogParentURL}" class=tag>
+                    reblogged from: {ReblogParentName}</a>  &nbsp;
+            {/block:RebloggedFrom}           
+            
+            {block:ContentSource}
+                <a href="{SourceURL}" class=tag>source: {SourceTitle}
+            {/block:ContentSource}
+            
+            <div id=break></div>
+                
+        </div>
+            
+            
+        {block:PermalinkPage}
+        
+        <br>
+        
+        {block:PostNotes}{PostNotes-16}{/block:PostNotes}
+        
+        {/block:PermalinkPage}
+        
+        
+    </div>
+            
+{/block:Posts}
+
+<br>
+
+{block:Pagination}
+
+    {block:PreviousPage}
+        <a href="{PreviousPage}">&#60;&#60;</a>
+    {/block:PreviousPage}&#32;
+    
+    {block:NextPage}
+        <a href="{NextPage}">&#62;&#62;</a>
+    {/block:NextPage}
+    
+    <br>
+    
+    {CurrentPage} / {TotalPages}
+    
+{/block:Pagination}
+
+</div>
+<div id="footer"></div>
+</body>
+</html>
