@@ -1,0 +1,50 @@
+=========================================================
+tumblr hosted images
+=========================================================
+http://static.tumblr.com/xi4q7k3/7VLnbqv36/main.css
+http://static.tumblr.com/xi4q7k3/lCanbqv4r/background.js
+http://static.tumblr.com/xi4q7k3/njbnbqv5h/header.gif
+http://static.tumblr.com/xi4q7k3/xj2nbqv8r/home_pic.png
+
+don't forget to include footer after everything and add the image to the background-url of the footer in the main css!!!
+
+=========================================================
+rabbitgirl 2.2 (May 1, 2016 - present)
+=========================================================
+
+Complete refactoring, to include templated code from a javascript file.
+
+=========================================================
+rabbitgirl 2.1 (May 1, 2016 - present)
+=========================================================
+
+
+
+=========================================================
+rabbitgirl 2.0 (Sep 12, 2015 - May 1, 2016)
+=========================================================
+
+Complete redesign, while mostly maintaining the same content. Finished Sep 30, 2015.
+
+=========================================================
+rabbitgirl 1.2 (April 18, 2015 - Sep 12, 2015)
+=========================================================
+    
+Modified font sizes for readability
+Made all the portfolio and project stuff work good.
+Got rid of javascript where it wasn't needed.
+Pushed all changes on September 12, 2015.
+
+=========================================================
+rabbitgirl 1.1 - April 1, 2014
+=========================================================
+
+Added dynamic time based backgrounds (flat colors only) using javascript.
+Fixed sidebar issues.
+Hosted all necessary images on tumblr.
+
+=========================================================
+rabbitgirl 1.0 - May 2013
+=========================================================
+
+Original release. Sidebar links are messed up, but everything else is function and reasonably fast.
