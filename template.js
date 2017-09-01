@@ -33,7 +33,7 @@ var body_front = `
                 <img src="/Images/link%20icon%20-%20instagram.png">
             </a>
         <a href="https://bitbucket.org/rabbitgirl">
-                <img src="/images/link%20icon%20-%20bitbucket.png">
+                <img src="/Images/link%20icon%20-%20bitbucket.png">
             </a>
         
         </div>
