@@ -23,7 +23,7 @@ var body_front = `
         <a href="https://twitter.com/_fvkr_">
                 <img src="/Images/link%20icon%20-%20twitter.png">
             </a>
-            <a href="https://music.fvkr.co">
+            <a href="http://music.fvkr.co">
                 <img src="/Images/link%20icon%20-%20bandcamp.png">
             </a>
             <a href="https://soundcloud.com/rabbit_girl">
@@ -43,12 +43,12 @@ var body_front = `
     <div id="sidebar">
         
         <ul>
-        <li><a href ="/about.html">about</a></li>
-        <li><a href ="http://music.fvkr.co">music</a></li>
-        <li><a href ="/writing.html">writing</a></li>
-        <li><a href ="/projects.html">projects</a></li>
-        <li><a href ="http://blog.rabbitgirl.me">blog</a></li>
-        <li><a href ="/contact.html">contact</a></li>
+        <a href="/about.html"><li>about</li></a>
+        <a href="http://music.fvkr.co"><li>music</li></a>
+        <a href="/writing.html"><li>writing</li></a>
+        <a href="/projects.html"><li>projects</li></a>
+        <a href="http://blog.fvkr.co"><li>blog</li></a>
+        <a href="/contact.html"><li>contact</li></a>
         </ul>
     
     </div>

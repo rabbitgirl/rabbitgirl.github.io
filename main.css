@@ -156,12 +156,12 @@ li {
 }
 
 #sidebar li {
-    transition: background 0.15s ease;
+    transition: background 0.25s ease;
     margin-top:0px;
 }
 
 #sidebar li:hover {
-    transition: background 0.15s ease;
+    transition: background 0.25s ease;
     background: #fff;
     color: #314456;
 }
