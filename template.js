@@ -44,7 +44,7 @@ var body_front = `
         
         <ul>
         <a href="/about.html"><li>about</li></a>
-        <a href="/music.html<li>music</li></a>
+        <a href="/music.html"<li>music</li></a>
         <a href="/writing.html"><li>writing</li></a>
         <a href="/projects.html"><li>projects</li></a>
         <a href="http://blog.fvkr.co"><li>blog</li></a>
